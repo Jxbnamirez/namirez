@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSE OF NAMIREZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1088511206442151936/1236152335542259782/Untiatled-1.png?ex=6948b613&is=69476493&hm=7fd5bf790486e4f374ce710cce0e588d43379d75e33ed2c64588fa45dc3319ee&=&format=webp&quality=lossless&width=864&height=864">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-container">
+        <header>
+            <h1>HOUSE OF NAMIREZ</h1>
+            <p class="subtitle">NEVER GIVE UP ON SOMETHING YOU REALLY WANT. HOWEVER IMPOSSIBLE THINGS MAY SEEM, THERE'S ALWAYS A WAY</p>
+        </header>
+
+        <section class="video-section">
+            <div class="video-wrapper">
+                <img src="images/logo.png" id="stark-logo-video" alt="Namirez Wolf">
+            </div>
+        </section>
+
+<div class="nav-interaction-wrapper">
+    <a href="https://namirezlist.netlify.app/" class="category-card main-active">
+        <span class="card-title">NAMIREZ</span>
+        <span class="card-desc">Leader & Member</span>
+    </a>
+</div>
+
+        <footer>
+            <p>© 2026 NAMIREZ | DESIGNED BY NONGPREM</p>
+        </footer>
+    </main>
+
+    <script>
+        function createSnow() {
+            const snow = document.createElement('div');
+            snow.innerHTML = '❄';
+            snow.classList.add('snowflake');
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.opacity = Math.random();
+            snow.style.fontSize = Math.random() * 20 + 10 + 'px';
+            snow.style.animationDuration = Math.random() * 3 + 7 + 's';
+            document.body.appendChild(snow);
+            setTimeout(() => { snow.remove(); }, 10000);
+        }
+        setInterval(createSnow, 300);
+        
+    </script>
+</body>
+</html>

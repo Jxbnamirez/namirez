@@ -1,0 +1,140 @@
+/* การตั้งค่าพื้นฐาน */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    
+    /* การดึงรูปพื้นหลังกลุ่มคนจากโฟลเดอร์ images */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+                      url('images/GTA5_2026-01-01_02-33-23_814.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    letter-spacing: 15px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #888;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-transform: uppercase;
+}
+
+/* กล่องโลโก้ตรงกลาง */
+.video-wrapper {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16/9;
+    margin: 0 auto 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+#stark-logo-video { 
+    width: 60%; 
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.3)); 
+}
+
+/* ปุ่มเลือกตัวละคร */
+.nav-interaction-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.category-card {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 50px;
+    border-radius: 15px;
+    min-width: 250px;
+    transition: all 0.4s ease;
+}
+
+.main-active {
+    border-color: #ffffff; 
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+.category-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(255,255,255,0.2);
+}
+
+.card-title { 
+    display: block; 
+    font-weight: bold; 
+    font-size: 1.4rem; 
+    letter-spacing: 4px; 
+}
+
+.card-desc { 
+    display: block; 
+    font-size: 0.7rem; 
+    color: #aaa; 
+    text-transform: uppercase; 
+    margin-top: 8px; 
+}
+
+footer { 
+    font-size: 0.6rem; 
+    color: #555; 
+    letter-spacing: 2px; 
+    margin-top: 20px;
+}
+
+/* หิมะตก */
+.snowflake {
+    position: fixed; 
+    top: -10%; 
+    z-index: 999;
+    color: white; 
+    user-select: none; 
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
